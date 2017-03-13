@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>JavaWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>/html/LogIn.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <session-config>
+        <session-timeout>10</session-timeout>
+    </session-config>
+ <!-- servlet start -->
+ 
+ <servlet>
+		<servlet-name>SignIn</servlet-name>
+		<servlet-class>Servlet.SignIn</servlet-class>
+  </servlet>
+	<servlet-mapping>
+		<servlet-name>SignIn</servlet-name>
+		<url-pattern>/SignIn</url-pattern>  <!-- 发布的虚拟路径 -->
+  </servlet-mapping>
+  
+ <!--  --> 
+ 
+  <servlet>
+		<servlet-name>LogIn</servlet-name>
+		<servlet-class>Servlet.LogIn</servlet-class>
+  </servlet>
+	<servlet-mapping>
+		<servlet-name>LogIn</servlet-name>
+		<url-pattern>/LogIn</url-pattern>
+  </servlet-mapping>
+  
+  <!--  --> 
+ 
+  <servlet>
+		<servlet-name>AddLinks</servlet-name>
+		<servlet-class>Servlet.AddLinks</servlet-class>
+  </servlet>
+	<servlet-mapping>
+		<servlet-name>AddLinks</servlet-name>
+		<url-pattern>/AddLinks</url-pattern>
+  </servlet-mapping>
+  
+    <!--  --> 
+ 
+  <servlet>
+		<servlet-name>Update</servlet-name>
+		<servlet-class>Servlet.Update</servlet-class>
+  </servlet>
+	<servlet-mapping>
+		<servlet-name>Update</servlet-name>
+		<url-pattern>/Update</url-pattern>
+  </servlet-mapping>
+      <!--  --> 
+ 
+  <servlet>
+		<servlet-name>DeleteLinks</servlet-name>
+		<servlet-class>Servlet.DeleteLinks</servlet-class>
+  </servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteLinks</servlet-name>
+		<url-pattern>/DeleteLinks</url-pattern>
+  </servlet-mapping>
+  <!-- servlet end -->
+  
+  <!-- 过滤器 start -->
+  <filter>
+  	<filter-name>encoding</filter-name>
+	<filter-class>Filter.CharSet</filter-class>
+  	<init-param>
+  		<param-name>charSet</param-name>
+  		<param-value>utf-8</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>encoding</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <!-- 过滤器 end -->
+
+</web-app>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户登录</title>
+<!-- 样式文件 -->
+<link rel="stylesheet" type="text/css" href="/JavaWeb/css/main.css"> 
+<!-- js脚本 -->
+<script type="text/javascript" src="/JavaWeb/js/LogIn.js"></script>
+</head>
+<body class="body">
+	<form id="signin_form" action="/JavaWeb/LogIn" method="post" onsubmit="return LogIn()">
+		<div class="form_box">
+			<div class="cap">
+				<label>登录 </label>
+			</div>
+			<div class="pwd">
+				<div>
+					<label class="lab">邮箱:</label>
+				</div>
+				<div class="tex">
+					<input id="Email" type="text" name="text_Email" onBlur="check_Email()" class="text_box">
+					
+				</div>
+				<div>
+						<label id="email_warn" class="warn">*</label>
+				</div>
+				
+			</div>
+			
+
+			<div class="pwd">
+				<div>
+					<label class="lab">密码:</label>
+				</div>
+				<div class="tex">
+					<input id="PassWord" type="password" name="text_PassWord" onBlur="check_Password()" class="text_box">
+				</div>
+				<div>
+						<label id="pass_word_warn" class="warn">*</label>
+				</div>
+			</div>
+			
+			
+			<div>
+				<div id="but_1">
+					<input type="submit" name="" value="登录" onClick="LogIn()" class="int_button submit_button">
+				</div>
+				<div id="but_2">
+					<input type="reset" name="" class="int_button submit_button" >
+				</div>
+			</div>
+			<div class="link" style="float:left;width: 100%;text-align: center;margin: 10px auto;">
+				<div>
+					<a class="a" href="/JavaWeb/html/SignIn.html">新用户注册</a>
+				</div>
+			</div>
+			<div class="logo">
+				MyLinks
+			</div>
+		</div>
+		
+	</form>
+					
+				
+</body>
+</html>
